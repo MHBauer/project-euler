@@ -33,3 +33,5 @@ $  python3 -c 'import MorganEuler; MorganEuler.euler001()'
 
 My only previous use of python was with the Natural Language Toolkit (NLTK).
 
+The ask of the project is not to publish solutions past the first 100.
+If I publish anything, it will be in encrypted form, as I do want to have my solutions in source control.
