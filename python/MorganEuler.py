@@ -157,10 +157,6 @@ def euler045(limit = 300000):
     x = t.intersection(p,h)
     print (x)
     
-
-def factor(n):
-    print('suck it')
-
 def euler012(n = 500):
     i = 1
     while(True):
