@@ -1,6 +1,6 @@
 Gonna do project Euler solutions in here.
 
-![Project Euler Progress](https://projecteuler.net/profile/mohaba.png)
+Check my [Project Euler Progress](https://projecteuler.net/profile/mohaba.png)!
 
 My grand plan is to have each different implementation cross-check
 against all of the others.
