@@ -232,6 +232,17 @@ def euler012(n = 500):
            return triangleNumber(i)
         i+=1
 
+def euler13():
+    """
+    Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
+    """
+    with open('../input/euler13.input') as f:
+        input = f.read().splitlines()
+    acc = 0
+    for n in input:
+        acc += int(n) 
+    return str(acc)[0:10]
+
 def findMinTriNum():
     i = 0
     while True:
