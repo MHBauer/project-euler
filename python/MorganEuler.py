@@ -1184,7 +1184,7 @@ def cc(amt, kinds):
         return 0
     return cc(amt, kinds-1) + cc(amt-firstAvailable(kinds), kinds)
 
-def euler031(n):
+def euler031():
     return cc(200,8)
 
 def euler032(limit = 9):
