@@ -1139,13 +1139,13 @@ def timePrimeSieve():
 import imp
 imp.reload(MorganEuler)'''
     t = Timer("ps = MorganEuler.haywardPrimeSieve2to3(100000)", setup)
-    #print(t.repeat(3,3))
+    print(t.repeat(3,3))
     t = Timer("ps = MorganEuler.primeSieve1(10000000)", setup)
     print(t.repeat(3,1))
     t = Timer("ps = MorganEuler.primeSieve2(10000000)", setup)
     print(t.repeat(3,1))
-    #t = Timer("ps = list(MorganEuler.gen_sieve(1000000-2))", setup)
-    #print(t.repeat(3,1))
+    t = Timer("ps = list(MorganEuler.gen_sieve(1000000-2))", setup)
+    print(t.repeat(3,1))
         
 def euler027(limit = 1000):
     '''finished 2011-07-27-2040'''
