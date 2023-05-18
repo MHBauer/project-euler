@@ -1329,5 +1329,7 @@ def euler039():
             for k in range(1,1000):
                 if i<j and j<k and i*i+j*j == k*k:
                     triples.append((i,j,k))
+    # with the triples, calculate the perimeter length of each triangle
+    # use a defaultDict to collapse everything with the same perimeter into a sum
     return triples
                 
