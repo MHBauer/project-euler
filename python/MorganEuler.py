@@ -7,6 +7,12 @@ from functools import reduce
 from operator import mul
 import itertools
 from itertools import *
+import sys
+import argparse
+import inspect
+
+import logging
+l = logging.getLogger(__name__)
 
 
 def euler001():
@@ -1333,3 +1339,20 @@ def euler039():
     # use a defaultDict to collapse everything with the same perimeter into a sum
     return triples
                 
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("problem")
+    args = parser.parse_args()
+    solution = "euler"+args.problem
+    l.warning("running " + solution)
+    if solution in globals():
+        func = globals()[solution]
+        if inspect.isfunction(func):
+            print(func())
+    else:
+        return -1
+    return 0
+
+if __name__ == '__main__':
+    sys.exit(main())
+
