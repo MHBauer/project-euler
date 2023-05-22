@@ -249,7 +249,7 @@ def euler13():
         acc += int(n) 
     return str(acc)[0:10]
 
-def euler14(max = 1_000_000):
+def euler14(max: int = 1_000_000):
     """
     The following iterative sequence is defined for the set of positive integers:
 
@@ -285,6 +285,42 @@ def nextCollatz(n: int):
         return n//2
     else:
         return 3*n + 1
+
+collatzTable: dict[int, int] = {1:1, 2:2} #, 4:3, 8:4,16:5, 5:6, 10:7,20:8,40:9,13:10}
+
+def euler14hash(max: int = 1_000_000):
+    for i in range(2, max):
+        nextCollatzTable(i)
+        # print(n, i)
+    maxLoc= 0
+    max = 0
+    for k in collatzTable:
+        ksize = collatzTable[k]
+        if ksize > max and k < 1_000_000:
+            maxLoc = k
+            max = ksize
+    return maxLoc
+
+def nextCollatzTable(n: int) -> int:
+    nextLen = 0
+    if n not in collatzTable:
+        if n % 2 == 0: # even
+            next = n//2
+            if next not in collatzTable:
+                nextLen = nextCollatzTable(next) + 1
+                # print(nextLen)
+                collatzTable[next] = nextLen
+        else:
+            next = 3*n + 1
+            if next not in collatzTable:
+                nextLen = nextCollatzTable(next) + 1
+                # print(nextLen)
+                collatzTable[next] = nextLen
+        nextLen = collatzTable[next]
+        collatzTable[n] = nextLen + 1
+    # print(collatzTable)
+    # print("return", collatzTable[n])
+    return collatzTable[n]
 
 def findMinTriNum():
     i = 0
