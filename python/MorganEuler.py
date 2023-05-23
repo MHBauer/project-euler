@@ -322,6 +322,17 @@ def nextCollatzTable(n: int) -> int:
     # print("return", collatzTable[n])
     return collatzTable[n]
 
+def euler15():
+    # this looks more like a paper and pencil one than possibly a calculation one.
+    # 1x1 has 2 ways
+    # 2x2 has 6 ways, as given
+    # 3x3 has
+    # 20x20 is 20 rights, and 20 downs. 40 moves total. so it's like 40 chose 20 kind of permutation
+    # this is actually called a combinatoric, which makes sense, because we're evaluating combinations of choices.
+    assert math.comb(2,1) == 2
+    assert math.comb(4,2) == 6
+    return math.comb(40,20)
+
 def findMinTriNum():
     i = 0
     while True:
