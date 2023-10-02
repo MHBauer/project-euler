@@ -333,6 +333,23 @@ def euler15():
     assert math.comb(4,2) == 6
     return math.comb(40,20)
 
+def euler16():
+    acc = 0
+    n = pow(2, 1000)
+    for c in str(n):
+        acc += int(c)
+    return acc
+
+from num2words import num2words
+
+def euler17():
+    acc = 0
+    for i in range(1,1001):
+        for c in num2words(i):
+            if c.isalpha():
+                acc = acc+1
+    return acc
+
 def findMinTriNum():
     i = 0
     while True:
